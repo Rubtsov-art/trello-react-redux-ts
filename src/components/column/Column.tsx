@@ -47,9 +47,7 @@ const Column: React.FC<ColumnProps> = ({ columnName, cards }) => {
     };
 
     useEffect(() => {
-        if (cards.length) {
             setChosenArray([...cards]);
-        }
     }, [cards]);
 
     return (
