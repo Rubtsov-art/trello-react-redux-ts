@@ -4,7 +4,7 @@ import { ColumnType } from "../types/types";
 
 const DBColumns = [
     {
-        name: "ToDo",
+        name: "Сделать",
         cards: [
             {
                 id: 1,
@@ -24,7 +24,7 @@ const DBColumns = [
         ]
     },
     {
-        name: "InProgress",
+        name: "В работе",
         cards: [
             {
                 id: 3,
@@ -52,7 +52,7 @@ const DBColumns = [
         ]
     },
     {
-        name: "Done",
+        name: "Готово",
         cards: [
             {
                 id: 6,

@@ -18,7 +18,10 @@ const useStyles = makeStyles((theme: Theme) =>
             justifyContent: "space-between"
         },
         header: {
-            backgroundColor: theme.palette.primary.light
+            backgroundColor: theme.palette.info.dark
+        },
+        headerText: {
+            color: "#fafafa"
         }
     }),
 );
@@ -53,7 +56,7 @@ const Column: React.FC<ColumnProps> = ({ columnName, cards }) => {
     return (
         <Paper elevation={3}>
             <Paper className={classes.header}>
-                <Typography variant="h6">{`${columnName}`}</Typography>
+                <Typography className={classes.headerText} component="h3" variant="h6">{`${columnName}`}</Typography>
             </Paper>
             <Divider />
             <Paper>

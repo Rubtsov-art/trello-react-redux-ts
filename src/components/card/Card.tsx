@@ -14,11 +14,11 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ columnName, card }) => {
     const dispatch = useDispatch();
     const [open, setOpen] = useState(false);
-    const newColumn = columnName === "ToDo" ? "InProgress" : "Done";
+    const newColumn = columnName === "Сделать" ? "В работе" : "Готово";
 
     const changeColumn = () => {
         dispatch(removeCardFromColumn(card.id, columnName));
-        if (columnName !== "Done") {
+        if (columnName !== "Готово") {
             dispatch(addCardToColumn(card, `${newColumn}`))
         }
     };
@@ -44,7 +44,7 @@ const Card: React.FC<CardProps> = ({ columnName, card }) => {
         <>
             <ListItem>
                 <ListItemIcon>
-                    <Checkbox onClick={changeColumn} checked={columnName === "Done"} color="primary" edge="start" tabIndex={-1} />
+                    <Checkbox onClick={changeColumn} checked={columnName === "Готово"} color="primary" edge="start" tabIndex={-1} />
                 </ListItemIcon>
                 <ListItemText id={card.id.toString()} primary={card.label} secondary={card.createDate.toLocaleString("ru", {
                     year: 'numeric',
