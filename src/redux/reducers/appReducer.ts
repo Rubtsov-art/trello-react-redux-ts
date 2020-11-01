@@ -122,7 +122,7 @@ export const removeCardFromColumn = (cardId: number, prevColumn: string): Remove
     return ({ type: REMOVE_CARD_FROM_COLUMN, payload: { cardId, prevColumn } });
 };
 
-// Логика с эмулцией асинхронного получения данных (массив колонок)
+// Логика с имитацией асинхронного получения данных (массив колонок)
 
 type CreateColumnsType = {
     type: typeof CREATE_COLUMNS,
